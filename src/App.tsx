@@ -47,7 +47,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 backdrop-blur-sm border border-blue-500/20"
               >
                 <Music className="w-4 h-4" />
-                <span className="text-sm font-medium">Intelligent Music Management</span>
+                <span className="text-sm font-medium">Inteligentne zarządzanie muzyką dla lokali</span>
               </motion.div>
 
               <motion.h1 
@@ -56,7 +56,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent relative z-10"
               >
-                Smart Music Management for Public Spaces
+                Nowa jakość w Twojej przestrzeni
               </motion.h1>
 
               <motion.p 
@@ -65,7 +65,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-base md:text-lg text-blue-100/80 text-center leading-relaxed max-w-2xl"
               >
-                Create playlists, schedule music, and manage announcements across multiple locations with ease. Experience the future of audio management.
+                Wspieraj niszowych artystów i personalizuj muzykę lub komunikaty w swoim lokalu, dzięki naszej innowacyjnej platformie. Transparentne rozliczenia i uczciwe tantiemy — tworzymy nową erę w kulturze dźwięku, dzięki technologiom blockchain i AI.
               </motion.p>
 
               <motion.div 

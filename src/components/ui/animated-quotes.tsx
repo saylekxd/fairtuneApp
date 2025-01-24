@@ -11,21 +11,21 @@ interface Quote {
 
 const quotes: Quote[] = [
   {
-    text: "FAIRTUNE has completely transformed how we manage music across our restaurant chain. The scheduling feature is a game-changer!",
-    author: "Sarah Johnson",
-    role: "Restaurant Chain Owner",
+    text: "Nawet w wersji testowej widać, jak wiele ten projekt może zmienić w życiu artystów",
+    author: "Piotr Tłustochowicz",
+    role: "Dyrektor artystyczny",
     rating: 5
   },
   {
-    text: "The platform's ease of use and powerful features have made managing our venue's music effortless.",
-    author: "Michael Chen",
-    role: "Venue Manager",
+    text: "Testowanie platformy pokazało, jak łatwo można usprawnić zarządzanie muzyką. Nie mogę się doczekać pełnej wersji i rozwoju tego projektu!",
+    author: "Adam Walento",
+    role: "Branża HoReCa",
     rating: 5
   },
   {
-    text: "Best investment we've made for our retail stores. The ambiance is perfect every time.",
-    author: "Emma Davis",
-    role: "Retail Director",
+    text: "Współpraca przy tym projekcie to inwestycja w przyszłość kultury. Nawet na tym etapie widać ogromny potencjał.",
+    author: "Snafu Miles",
+    role: "Artysta",
     rating: 5
   }
 ];
