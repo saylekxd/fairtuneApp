@@ -17,13 +17,13 @@ const quotes: Quote[] = [
     rating: 5
   },
   {
-    text: "Testowanie platformy pokazało, jak łatwo można usprawnić zarządzanie muzyką. Nie mogę się doczekać pełnej wersji i rozwoju tego projektu!",
+    text: "Testowanie platformy pokazało, jak łatwo można usprawnić zarządzanie muzyką.",
     author: "Adam Walento",
     role: "Branża HoReCa",
     rating: 5
   },
   {
-    text: "Współpraca przy tym projekcie to inwestycja w przyszłość kultury. Nawet na tym etapie widać ogromny potencjał.",
+    text: "Współpraca przy tym projekcie to inwestycja w przyszłość kultury. Widać ogromny potencjał.",
     author: "Snafu Miles",
     role: "Artysta",
     rating: 5

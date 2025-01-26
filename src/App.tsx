@@ -18,12 +18,11 @@ import ContactPage from './pages/ContactPage';
 import FeaturesPage from './pages/FeaturesPage';
 import { supabase } from './lib/supabase';
 import type { User } from '@supabase/supabase-js';
+import { Footer } from './components/Footer';
 
 const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-zinc-950 to-zinc-900 text-white relative">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-[0.02]"></div>
-      
+    <div className="relative">
       <FlickeringGrid
         className="absolute inset-0 z-0"
         squareSize={4}
@@ -37,7 +36,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
         <MainNavbar onLoginClick={onLoginClick} />
         <div className="w-full min-h-screen flex flex-col">
           <div className="flex-1 container mx-auto">
-            <div className="flex gap-6 items-center justify-center flex-col pt-20 md:pt-32 px-4">
+            <div className="flex gap-6 mt-4 items-center justify-center flex-col pt-20 md:pt-32 px-4">
               <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
               
               <motion.div 
@@ -79,7 +78,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
                   className="gap-2 bg-white text-black hover:bg-gray-100" 
                   onClick={onLoginClick}
                 >
-                  Get Started <ChevronRight className="w-4 h-4" />
+                  Zacznijmy <ChevronRight className="w-4 h-4" />
                 </Button>
               </motion.div>
 
@@ -130,6 +129,8 @@ export default function App() {
     return () => subscription.unsubscribe();
   }, []);
 
+// use it in the Zacznijmy component
+
   const handleSignUpClick = () => {
     setAuthView('signup');
     setShowAuthModal(true);
@@ -170,6 +171,8 @@ export default function App() {
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+
+        <Footer />
 
         <AuthModal 
           isOpen={showAuthModal}
