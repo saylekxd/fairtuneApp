@@ -20,16 +20,7 @@ import {
 import { supabase } from '../lib/supabase';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePreferences } from '../contexts/PreferencesContext';
-
-interface Preference {
-  id: string;
-  label: string;
-  description: string;
-  category: 'display' | 'notifications' | 'privacy' | 'language' | 'accessibility';
-  type: 'toggle' | 'select' | 'radio' | 'range';
-  options?: { value: string; label: string }[];
-  value: any;
-}
+import type { Preference } from '../types';
 
 const defaultPreferences: Preference[] = [
   // Display Settings
@@ -217,7 +208,7 @@ export default function PreferencesPage() {
         );
       }
     } catch (error) {
-      console.error('Error loading preferences:', error);
+      console.error('Błąd podczas ładowania preferencji:', error);
     } finally {
       setLoading(false);
     }
@@ -245,7 +236,7 @@ export default function PreferencesPage() {
       setSavedMessage(true);
       setTimeout(() => setSavedMessage(false), 3000);
     } catch (error) {
-      console.error('Error saving preferences:', error);
+      console.error('Błąd podczas zapisywania preferencji:', error);
     } finally {
       setSaving(false);
     }
@@ -287,7 +278,7 @@ export default function PreferencesPage() {
   return (
     <div className="p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        {/* Build Mode Banner - Made responsive */}
+        {/* Tryb budowy - Zrobiony responsywnie */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -300,25 +291,25 @@ export default function PreferencesPage() {
             <div className="flex-1">
               <h3 className="text-base md:text-lg font-semibold text-yellow-500 flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 md:w-5 md:h-5" />
-                Build Mode Active
+                Tryb budowy aktywny
               </h3>
               <p className="text-sm md:text-base text-yellow-200/80">
-                The Preferences tool is currently under development.
+                Narzędzie preferencji jest obecnie w fazie rozwoju.
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* Header - Made responsive */}
+        {/* Nagłówek - Zrobiony responsywnie */}
         <div className="flex items-center justify-between mb-6 md:mb-8">
-          <h2 className="text-xl md:text-2xl font-bold">Preferences</h2>
+          <h2 className="text-xl md:text-2xl font-bold">Preferencje</h2>
           <div className="flex items-center gap-2 md:gap-4">
             <button
               onClick={resetToDefaults}
               className="md:flex items-center gap-2 px-2 md:px-4 py-2 text-zinc-400 hover:text-white transition-colors"
             >
               <RotateCcw className="w-4 h-4" />
-              <span className="hidden md:inline">Reset</span>
+              <span className="hidden md:inline">Resetuj</span>
             </button>
             <button
               onClick={savePreferences}
@@ -330,24 +321,24 @@ export default function PreferencesPage() {
               ) : (
                 <Save className="w-4 h-4" />
               )}
-              <span className="hidden md:inline">Save Changes</span>
+              <span className="hidden md:inline">Zapisz zmiany</span>
             </button>
           </div>
         </div>
 
-        {/* Search - Made responsive */}
+        {/* Wyszukiwanie - Zrobione responsywnie */}
         <div className="relative mb-4 md:mb-6">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-zinc-400" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search preferences..."
+            placeholder="Szukaj preferencji..."
             className="w-full bg-zinc-800 border border-zinc-700 rounded-lg py-2 pl-10 pr-4 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500"
           />
         </div>
 
-        {/* Mobile Category Menu Button */}
+        {/* Przycisk menu kategorii mobilnych */}
         <div className="md:hidden mb-4">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -355,13 +346,13 @@ export default function PreferencesPage() {
           >
             <div className="flex items-center gap-2">
               <Menu className="w-5 h-5" />
-              <span>Categories</span>
+              <span>Kategorie</span>
             </div>
             <span className="text-zinc-400">{categories.find(c => c.id === activeCategory)?.label}</span>
           </button>
         </div>
 
-        {/* Mobile Category Menu */}
+        {/* Menu kategorii mobilnych */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -377,7 +368,7 @@ export default function PreferencesPage() {
                 className="absolute inset-y-0 left-0 w-3/4 bg-zinc-900 p-4"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-lg font-bold">Categories</h3>
+                  <h3 className="text-lg font-bold">Kategorie</h3>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-2 hover:bg-zinc-800 rounded-lg"
@@ -410,7 +401,7 @@ export default function PreferencesPage() {
         </AnimatePresence>
 
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
-          {/* Desktop Categories */}
+          {/* Kategorie na pulpicie */}
           <div className="hidden md:block w-64 flex-shrink-0">
             <nav className="space-y-1">
               {categories.map(category => (
@@ -430,7 +421,7 @@ export default function PreferencesPage() {
             </nav>
           </div>
 
-          {/* Preferences Content - Made responsive */}
+          {/* Zawartość preferencji - Zrobiona responsywnie */}
           <div className="flex-1 bg-zinc-800/50 rounded-lg p-3 md:p-6">
             <AnimatePresence mode="wait">
               <motion.div
@@ -448,7 +439,7 @@ export default function PreferencesPage() {
                           <h3 className="font-medium">{pref.label}</h3>
                           <button
                             className="opacity-0 group-hover:opacity-100 transition-opacity"
-                            title="More information"
+                            title="Więcej informacji"
                           >
                             <Info className="w-4 h-4 text-zinc-400" />
                           </button>
@@ -513,7 +504,7 @@ export default function PreferencesPage() {
         </div>
       </div>
 
-      {/* Success Message - Made responsive */}
+      {/* Wiadomość o sukcesie - Zrobiona responsywnie */}
       <AnimatePresence>
         {savedMessage && (
           <motion.div
@@ -523,7 +514,7 @@ export default function PreferencesPage() {
             className="fixed bottom-4 right-4 md:bottom-8 md:right-8 flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg"
           >
             <Check className="w-4 h-4" />
-            <span>Preferences saved</span>
+            <span>Preferencje zapisane</span>
           </motion.div>
         )}
       </AnimatePresence>

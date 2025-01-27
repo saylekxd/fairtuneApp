@@ -36,7 +36,7 @@ export const Library = () => {
   return (
     <div>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-zinc-400 text-sm font-medium">YOUR LIBRARY</h2>
+        <h2 className="text-zinc-400 text-sm font-medium">TWOJA BIBLIOTEKA</h2>
         <button
           onClick={() => setIsCreateModalOpen(true)}
           className="p-2 hover:bg-zinc-800 rounded-lg transition-colors"

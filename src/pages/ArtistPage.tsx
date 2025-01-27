@@ -45,7 +45,7 @@ export default function ArtistPage() {
           setTracks(tracksResponse.data);
         }
       } catch (error) {
-        console.error('Error loading artist:', error);
+        console.error('Błąd podczas ładowania artysty:', error);
       } finally {
         setLoading(false);
       }
@@ -55,9 +55,9 @@ export default function ArtistPage() {
   }, [artistId]);
 
   const handlePlayTrack = (track: Track, index: number) => {
-    // Create a playlist only from this artist's tracks
+    // Utwórz playlistę tylko z utworów tego artysty
     const artistPlaylist = [...tracks];
-    // Reorder the playlist to start from the selected track
+    // Przestaw playlistę, aby rozpocząć od wybranego utworu
     const reorderedPlaylist = [
       ...artistPlaylist.slice(index),
       ...artistPlaylist.slice(0, index)
@@ -67,7 +67,7 @@ export default function ArtistPage() {
 
   const handlePlayAll = () => {
     if (tracks.length > 0) {
-      // Pass the complete artist track list as the playlist
+      // Przekaż pełną listę utworów artysty jako playlistę
       playTrack(tracks[0], tracks);
     }
   };
@@ -84,8 +84,8 @@ export default function ArtistPage() {
     return (
       <div className="p-8">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Artist not found</h2>
-          <p className="text-zinc-400">The artist you're looking for doesn't exist.</p>
+          <h2 className="text-2xl font-bold mb-2">Artysta nie znaleziony</h2>
+          <p className="text-zinc-400">Artysta, którego szukasz, nie istnieje.</p>
         </div>
       </div>
     );
@@ -118,7 +118,7 @@ export default function ArtistPage() {
               className="flex items-center gap-2 px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors"
             >
               <Play className="w-5 h-5" />
-              <span>Play All</span>
+              <span>Odtwórz wszystko</span>
             </button>
           </div>
         </div>

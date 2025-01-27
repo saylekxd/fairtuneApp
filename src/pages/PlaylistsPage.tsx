@@ -6,7 +6,7 @@ export default function PlaylistsPage() {
   return (
     <Suspense fallback={
       <div className="p-8">
-        <h2 className="text-2xl font-bold mb-6">Genre Playlists</h2>
+        <h2 className="text-2xl font-bold mb-6">Playlisty gatunkowe</h2>
         <LoadingSkeleton type="genre" count={8} />
       </div>
     }>

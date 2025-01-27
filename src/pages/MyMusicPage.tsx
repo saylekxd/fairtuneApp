@@ -26,21 +26,21 @@ export default function MyMusicPage() {
   return (
     <div className="p-8">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-bold">My Music</h2>
+        <h2 className="text-2xl font-bold">Moja Muzyka</h2>
         <div className="flex items-center gap-2">
           <TabButton
             active={activeTab === 'tracks'}
             onClick={() => setActiveTab('tracks')}
           >
             <Music className="w-5 h-5" />
-            <span>Liked Tracks</span>
+            <span>Polubione utwory</span>
           </TabButton>
           <TabButton
             active={activeTab === 'playlists'}
             onClick={() => setActiveTab('playlists')}
           >
             <ListMusic className="w-5 h-5" />
-            <span>Liked Playlists</span>
+            <span>Polubione playlisty</span>
           </TabButton>
         </div>
       </div>

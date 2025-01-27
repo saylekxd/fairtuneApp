@@ -14,7 +14,7 @@ interface PlaylistDetails {
   tracks: Track[];
 }
 
-// Fisher-Yates shuffle algorithm
+// Algorytm Fisher-Yates do tasowania
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -42,7 +42,7 @@ export default function PlaylistDetailsPage() {
           .order('title');
 
         if (tracks) {
-          // Shuffle tracks by default for main playlists
+          // Domyślnie tasuj utwory dla głównych playlist
           const shuffledTracks = shuffleArray(tracks);
           
           setPlaylist({
@@ -55,7 +55,7 @@ export default function PlaylistDetailsPage() {
           setIsShuffled(true);
         }
 
-        // Load liked tracks
+        // Załaduj polubione utwory
         const { data: { user } } = await supabase.auth.getUser();
         if (user) {
           const { data: likes } = await supabase
@@ -68,7 +68,7 @@ export default function PlaylistDetailsPage() {
           }
         }
       } catch (error) {
-        console.error('Error loading playlist:', error);
+        console.error('Błąd podczas ładowania playlisty:', error);
       } finally {
         setLoading(false);
       }
@@ -121,7 +121,7 @@ export default function PlaylistDetailsPage() {
         setLikedTracks(prev => new Set([...prev, trackId]));
       }
     } catch (err) {
-      console.error('Error toggling track like:', err);
+      console.error('Błąd podczas zmiany polubienia utworu:', err);
     }
   };
 
@@ -133,7 +133,7 @@ export default function PlaylistDetailsPage() {
 
   const handlePlayTrack = (track: Track, index: number) => {
     if (playlist) {
-      // Create a new playlist starting from the selected track
+      // Utwórz nową playlistę zaczynając od wybranego utworu
       const reorderedTracks = [
         ...playlist.tracks.slice(index),
         ...playlist.tracks.slice(0, index)
@@ -153,8 +153,8 @@ export default function PlaylistDetailsPage() {
   if (!playlist) {
     return (
       <div className="p-8 text-center">
-        <h2 className="text-2xl font-bold mb-2">Playlist not found</h2>
-        <p className="text-zinc-400">The playlist you're looking for doesn't exist.</p>
+        <h2 className="text-2xl font-bold mb-2">Playlista nie znaleziona</h2>
+        <p className="text-zinc-400">Playlista, której szukasz, nie istnieje.</p>
       </div>
     );
   }
@@ -171,14 +171,14 @@ export default function PlaylistDetailsPage() {
         </div>
         <div>
           <h1 className="text-4xl font-bold mb-2">{playlist.name}</h1>
-          <p className="text-zinc-400 mb-6">{playlist.tracks.length} tracks</p>
+          <p className="text-zinc-400 mb-6">{playlist.tracks.length} utworów</p>
           <div className="flex gap-4">
             <button
               onClick={handlePlayAll}
               className="flex items-center gap-2 px-6 py-3 bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors"
             >
               <Play className="w-5 h-5" />
-              <span>Play All</span>
+              <span>Odtwórz wszystko</span>
             </button>
             <button
               onClick={toggleShuffle}
@@ -189,7 +189,7 @@ export default function PlaylistDetailsPage() {
               }`}
             >
               <Shuffle className="w-5 h-5" />
-              <span>{isShuffled ? 'Shuffled' : 'Shuffle'}</span>
+              <span>{isShuffled ? 'Wymieszane' : 'Wymieszaj'}</span>
             </button>
           </div>
         </div>

@@ -36,7 +36,7 @@ const ArtistCard = ({ artist }: { artist: Artist }) => {
       </div>
       <div className="p-4">
         <h3 className="font-bold text-lg mb-1 truncate">{artist.name}</h3>
-        <p className="text-sm text-zinc-400">{artist.track_count} tracks</p>
+        <p className="text-sm text-zinc-400">{artist.track_count} utworów</p>
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ export default function ArtistsPage() {
           })));
         }
       } catch (error) {
-        console.error('Error loading artists:', error);
+        console.error('Błąd podczas ładowania artystów:', error);
       } finally {
         setLoading(false);
       }
@@ -79,8 +79,8 @@ export default function ArtistsPage() {
       <div className="flex flex-col gap-6 mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl font-bold mb-2">Artists</h2>
-            <p className="text-zinc-400">Browse all artists in your library</p>
+            <h2 className="text-3xl font-bold mb-2">Artyści</h2>
+            <p className="text-zinc-400">Przeglądaj wszystkich artystów w swojej bibliotece</p>
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export default function ArtistsPage() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search artists..."
+            placeholder="Szukaj artystów..."
             className="w-full bg-zinc-800 border border-zinc-700 rounded-lg py-2 pl-10 pr-4 text-white placeholder-zinc-400 focus:outline-none focus:border-blue-500"
           />
         </div>

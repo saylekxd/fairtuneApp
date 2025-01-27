@@ -11,11 +11,11 @@ export const Navigation = ({ onItemClick }: NavigationProps) => {
   const { isAdmin, loading } = useAdminStatus();
 
   const baseNavItems = [
-    { to: '/', icon: Home, label: 'Main Site' },
-    { to: '/artists', icon: Users, label: 'Artists' },
-    { to: '/playlists', icon: ListMusic, label: 'Playlists' },
-    { to: '/my-music', icon: Music, label: 'My Music' },
-    { to: '/preferences', icon: Settings, label: 'Preferences' },
+    { to: '/', icon: Home, label: 'Główna' },
+    { to: '/artists', icon: Users, label: 'Artyści' },
+    { to: '/playlists', icon: ListMusic, label: 'Playlisty' },
+    { to: '/my-music', icon: Music, label: 'Moja muzyka' },
+    { to: '/preferences', icon: Settings, label: 'Ustawienia' },
   ];
 
   // Add Upload Track option only for admin users

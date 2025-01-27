@@ -37,7 +37,7 @@ function DiscoverPage() {
           .order('created_at', { ascending: false });
 
         if (tracks) {
-          // Group tracks by genre
+          // Grupowanie utworów według gatunku
           const groupedTracks = tracks.reduce((acc, track) => {
             if (track.genre && track.genre in GENRE_COVERS) {
               if (!acc[track.genre]) {
@@ -48,7 +48,7 @@ function DiscoverPage() {
             return acc;
           }, {} as Record<string, Track[]>);
 
-          // Create playlist data with different sizes
+          // Tworzenie danych playlist z różnymi rozmiarami
           const playlistData: PlaylistData[] = Object.entries(groupedTracks).map(([genre, tracks], index) => ({
             genre,
             tracks,
@@ -59,7 +59,7 @@ function DiscoverPage() {
           setPlaylists(playlistData);
         }
       } catch (error) {
-        console.error('Error loading playlists:', error);
+        console.error('Błąd podczas ładowania playlist:', error);
       } finally {
         setLoading(false);
       }
@@ -70,7 +70,7 @@ function DiscoverPage() {
 
   const handlePlayPlaylist = (tracks: Track[]) => {
     if (tracks.length > 0) {
-      // Pass both the first track and the complete playlist
+      // Przekazanie zarówno pierwszego utworu, jak i całej playlisty
       playTrack(tracks[0], tracks);
     }
   };
@@ -78,7 +78,7 @@ function DiscoverPage() {
   if (loading) {
     return (
       <div className="p-8">
-        <h2 className="text-2xl font-bold mb-6">Discover</h2>
+        <h2 className="text-2xl font-bold mb-6">Odkrywaj</h2>
         <div className="grid grid-cols-4 gap-4">
           <LoadingSkeleton type="genre" count={6} />
         </div>
@@ -92,12 +92,12 @@ function DiscoverPage() {
       
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h2 className="text-3xl font-bold mb-2">Discover</h2>
-          <p className="text-zinc-400">Explore curated playlists for every mood</p>
+          <h2 className="text-3xl font-bold mb-2">Odkrywaj</h2>
+          <p className="text-zinc-400">Przeglądaj wyselekcjonowane playlisty na każdą okazję</p>
         </div>
         <button className="flex items-center gap-2 px-4 py-2 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors">
           <ListMusic className="w-5 h-5" />
-          <span>View All</span>
+          <span>Zobacz wszystkie</span>
         </button>
       </div>
 
@@ -132,7 +132,7 @@ const PlaylistCard = ({
 
   const handlePlayClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Pass only the tracks from this playlist
+    // Przekazanie tylko utworów z tej playlisty
     onPlay(playlist.tracks);
   };
 
@@ -173,7 +173,7 @@ const PlaylistCard = ({
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-xl font-bold mb-1">{playlist.genre} Mix</h3>
-              <p className="text-sm text-zinc-300">{playlist.tracks.length} tracks</p>
+              <p className="text-sm text-zinc-300">{playlist.tracks.length} utworów</p>
             </div>
             <button 
               className="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full hover:bg-blue-600 transition-colors"

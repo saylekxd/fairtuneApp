@@ -48,7 +48,7 @@ const PlaylistCard = ({ playlist, onPlay }: { playlist: PlaylistData; onPlay: (t
             {playlist.subgenre && (
               <p className="text-sm text-zinc-300">{playlist.subgenre}</p>
             )}
-            <p className="text-sm text-zinc-400">{playlist.tracks.length} tracks</p>
+            <p className="text-sm text-zinc-400">{playlist.tracks.length} utworów</p>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function HipHopPage() {
           })));
         }
       } catch (error) {
-        console.error('Error loading playlists:', error);
+        console.error('Błąd podczas ładowania playlist:', error);
       } finally {
         setLoading(false);
       }
@@ -134,17 +134,17 @@ export default function HipHopPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
           <div className="absolute bottom-0 inset-x-0 p-8">
             <h1 className="text-5xl font-bold mb-4">Hip-Hop</h1>
-            <p className="text-xl text-zinc-300">Discover the best in hip-hop music</p>
+            <p className="text-xl text-zinc-300">Odkryj najlepszą muzykę hip-hopową</p>
           </div>
         </div>
       </div>
 
       <section className="mb-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">Discovery Playlists</h2>
+          <h2 className="text-2xl font-bold">Playlisty odkrywcze</h2>
           <button className="flex items-center gap-2 px-4 py-2 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors">
             <ListMusic className="w-5 h-5" />
-            <span>View All</span>
+            <span>Zobacz wszystkie</span>
           </button>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
@@ -160,10 +160,10 @@ export default function HipHopPage() {
 
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">Genre-Specific Playlists</h2>
+          <h2 className="text-2xl font-bold">Playlisty gatunkowe</h2>
           <button className="flex items-center gap-2 px-4 py-2 bg-zinc-800 rounded-lg hover:bg-zinc-700 transition-colors">
             <ListMusic className="w-5 h-5" />
-            <span>View All</span>
+            <span>Zobacz wszystkie</span>
           </button>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">

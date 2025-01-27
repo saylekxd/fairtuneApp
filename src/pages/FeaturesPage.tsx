@@ -7,33 +7,33 @@ export default function FeaturesPage() {
   const features = [
     {
       icon: <Music className="w-6 h-6" />,
-      title: "Smart Music Management",
-      description: "Intelligent playlist creation and management for any venue size"
+      title: "Inteligentne zarządzanie muzyką",
+      description: "Inteligentne tworzenie i zarządzanie playlistami dla każdego rozmiaru lokalu"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Multi-Location Support",
-      description: "Manage music across multiple locations from a single dashboard"
+      title: "Wsparcie dla wielu lokalizacji",
+      description: "Zarządzaj muzyką w wielu lokalizacjach z jednego panelu"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Scheduled Playlists",
-      description: "Set up automated playlist schedules for different times and days"
+      title: "Zaplanuj playlisty",
+      description: "Ustaw automatyczne harmonogramy playlist na różne czasy i dni"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Global Access",
-      description: "Access your music library from anywhere in the world"
+      title: "Dostęp globalny",
+      description: "Uzyskaj dostęp do swojej biblioteki muzycznej z dowolnego miejsca na świecie"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Content Filtering",
-      description: "Automatic content filtering for family-friendly environments"
+      title: "Filtrowanie treści",
+      description: "Automatyczne filtrowanie treści dla przyjaznych rodzinie środowisk"
     },
     {
       icon: <Sparkles className="w-6 h-6" />,
-      title: "AI-Powered Recommendations",
-      description: "Get smart playlist recommendations based on your venue type"
+      title: "Rekomendacje oparte na AI",
+      description: "Otrzymuj inteligentne rekomendacje playlist na podstawie typu lokalu"
     }
   ];
 
@@ -42,10 +42,10 @@ export default function FeaturesPage() {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            Powerful Features for Modern Venues
+            Potężne funkcje dla nowoczesnych lokali
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Everything you need to create the perfect atmosphere for your business
+            Wszystko, czego potrzebujesz, aby stworzyć idealną atmosferę dla swojego biznesu
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function FeaturesPage() {
 
         <div className="mt-16 text-center">
           <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-            Get Started Now
+            Rozpocznij teraz
           </Button>
         </div>
       </div>

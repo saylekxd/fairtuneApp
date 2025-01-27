@@ -44,13 +44,13 @@ export default function RoadmapPage() {
     },
     {
       title: "Ekspansja produktu",
-      description: "Ekspansja produktu w formie pilotazu na rynek Polski i Europy Środkowo-Wschodniej oraz runda pre-seed w celu pozyskania inwestora",
+      description: "Ekspansja produktu w formie pilotażu na rynek Polski i Europy Środkowo-Wschodniej oraz runda pre-seed w celu pozyskania inwestora",
       date: "Q4 2024",
       status: "upcoming"
     },
     {
       title: "Rekomendacje i pilotaż dla OZZ",
-      description: "Dla osiągnięcia efektu skali naszego rozwiązania, chcemy zarekomendować gotowe rozwiązanie dla Organizacja zbiorowego zarządzania prawami autorskimi",
+      description: "Dla osiągnięcia efektu skali naszego rozwiązania, chcemy zarekomendować gotowe rozwiązanie dla Organizacji zbiorowego zarządzania prawami autorskimi",
       date: "Q4 2024",
       status: "upcoming"
     }
@@ -102,10 +102,10 @@ export default function RoadmapPage() {
         </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Timeline line */}
+          {/* Linia osi czasu */}
           <div className="absolute left-8 top-0 bottom-0 w-px bg-zinc-800" />
 
-          {/* Milestones */}
+          {/* Kamienie milowe */}
           <div className="space-y-12">
             {milestones.map((milestone, index) => (
               <motion.div
@@ -115,12 +115,12 @@ export default function RoadmapPage() {
                 transition={{ delay: index * 0.1 }}
                 className="relative flex gap-8"
               >
-                {/* Timeline node */}
+                {/* Węzeł osi czasu */}
                 <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-zinc-900 rounded-full">
                   {getStatusIcon(milestone.status)}
                 </div>
 
-                {/* Content */}
+                {/* Zawartość */}
                 <motion.div 
                   className="flex-1 bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6"
                   whileHover={{ scale: 1.02 }}
@@ -157,7 +157,7 @@ export default function RoadmapPage() {
           </div>
         </div>
 
-        {/* Future Teaser */}
+        {/* Zajawka przyszłości */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

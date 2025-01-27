@@ -26,8 +26,8 @@ export default function UploadPage() {
           <Shield className="w-6 h-6 text-blue-400" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold">Upload Track</h2>
-          <p className="text-sm text-zinc-400">Add new tracks to the library</p>
+          <h2 className="text-2xl font-bold">Prześlij utwór</h2>
+          <p className="text-sm text-zinc-400">Dodaj nowe utwory do biblioteki</p>
         </div>
       </div>
       <AdminTrackUploader />

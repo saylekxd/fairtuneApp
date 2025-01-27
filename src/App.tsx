@@ -46,7 +46,7 @@ const LandingPage = ({ onLoginClick }: { onLoginClick: () => void }) => {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 backdrop-blur-sm border border-blue-500/20"
               >
                 <Music className="w-4 h-4" />
-                <span className="text-sm font-medium">Inteligentne zarządzanie muzyką dla lokali</span>
+                <span className="text-sm font-medium text-center">Inteligentne zarządzanie muzyką dla lokali</span>
               </motion.div>
 
               <motion.h1 
