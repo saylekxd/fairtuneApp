@@ -6,27 +6,27 @@ import { PhotoGallery } from '../components/ui/photo-gallery';
 
 export default function AboutPage() {
   const stats = [
-    { label: 'Active Users', value: '10,000+' },
-    { label: 'Locations', value: '1,000+' },
-    { label: 'Songs Played', value: '1M+' },
-    { label: 'Countries', value: '50+' }
+    { label: 'Budowa MVP', value: 'Etap' },
+    { label: 'Wsparcie artystów', value: 'Wizja' },
+    { label: 'Blockchain i VoiceAI', value: 'Technologia' },
+    { label: 'Rynki CEE', value: 'Zasięg' }
   ];
 
   const values = [
     {
       icon: <Heart className="w-6 h-6" />,
-      title: 'Customer First',
-      description: 'We put our customers at the heart of everything we do'
+      title: 'Twórcy w centrum uwagi',
+      description: 'Wspieramy niszowych artystów, zapewniając im przejrzystość rozliczeń oraz wynagrodzenie na poziomie 80% z przychodów platformy.'
     },
     {
       icon: <Award className="w-6 h-6" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in every aspect of our service'
+      title: 'Rewolucja w branży muzycznej',
+      description: 'Łączymy blockchain i AI, aby stworzyć nowoczesny ekosystem muzyczny, który eliminuje problem "zagubionych tantiem" i wspiera rozwój kultury.'
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Innovation',
-      description: 'Constantly innovating to provide cutting-edge solutions'
+      title: 'Technologie przyszłości',
+      description: 'Integrujemy zaawansowane algorytmy AI i systemy inteligentnych kontraktów, aby uprościć zarządzanie muzyką i dostarczać spersonalizowane doświadczenia użytkownikom.'
     }
   ];
 
@@ -39,10 +39,11 @@ export default function AboutPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            About FAIRTUNE
+            O FAIRTUNE
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Revolutionizing music management for businesses worldwide
+          
+            Fairtune to innowacyjna platforma B2B, która ma wykorzystywać blockchain i AI, aby zapewnić transparentną dystrybucję muzyki, wspierając niszowych artystów i upraszczając zarządzanie muzyką dla firm.
           </p>
         </motion.div>
 
@@ -68,7 +69,7 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-16"
         >
-          <h2 className="text-2xl font-bold mb-8 text-center">Our Story in Pictures</h2>
+          <h2 className="text-2xl font-bold mb-8 text-center">Nasze wartości i misja</h2>
           <PhotoGallery />
         </motion.div>
 

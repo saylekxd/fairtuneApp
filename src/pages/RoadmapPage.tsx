@@ -13,38 +13,44 @@ interface Milestone {
 export default function RoadmapPage() {
   const milestones: Milestone[] = [
     {
-      title: "Platform Launch",
-      description: "Initial release with core music management features",
+      title: "Uruchomienie platformy",
+      description: "Wstępne uruchomienie platformy streamingowej z podstawowymi funkcjami zarządzania muzyką",
       date: "Q1 2024",
       status: "completed"
     },
     {
-      title: "Mobile App Release",
-      description: "Native mobile applications for iOS and Android",
+      title: "Implementacja blockchain i ochrona praw autorskich",
+      description: "Wdrożenie mechanizmu rozliczeń tantiem w technologii blockchain oraz rozpoczęcie kampanii dot. ochrony praw autorskich",
       date: "Q2 2024",
       status: "in-progress"
     },
     {
-      title: "AI-Powered Recommendations",
-      description: "Smart playlist suggestions based on venue type and customer preferences",
+      title: "System rekomendacji playlist",
+      description: "Rozszerzenie banku playlist i wprowadzenie inteligentnych rekomendacji, które będą dostosowywać się do specyfiki lokalu",
       date: "Q3 2024",
       status: "upcoming"
     },
     {
-      title: "Advanced Analytics",
-      description: "Detailed insights and performance metrics for business owners",
+      title: "Wdrożenie technologii VoiceAI",
+      description: "Innowacja, która pozwoli na generowanie spersonalizowanych komunikatów głosowych w przestrzeniach lokali",
       date: "Q3 2024",
       status: "upcoming"
     },
     {
-      title: "Multi-Zone Audio",
-      description: "Control different music zones within the same venue",
+      title: "Zaawansowana analityka",
+      description: "Moduł szczegółowej analityki, który umożliwia właścicielom lokali uzyskiwanie szczegółowych danych o preferencjach klientów i efektywności muzyki w różnych strefach.",
+      date: "Q3 2024",
+      status: "upcoming"
+    },
+    {
+      title: "Ekspansja produktu",
+      description: "Ekspansja produktu w formie pilotazu na rynek Polski i Europy Środkowo-Wschodniej oraz runda pre-seed w celu pozyskania inwestora",
       date: "Q4 2024",
       status: "upcoming"
     },
     {
-      title: "Voice Commands",
-      description: "Control your music system using voice commands",
+      title: "Rekomendacje i pilotaż dla OZZ",
+      description: "Dla osiągnięcia efektu skali naszego rozwiązania, chcemy zarekomendować gotowe rozwiązanie dla Organizacja zbiorowego zarządzania prawami autorskimi",
       date: "Q4 2024",
       status: "upcoming"
     }
@@ -88,10 +94,10 @@ export default function RoadmapPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            Product Roadmap
+            Mapa rozwoju produktu 
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            See what we're building and what's coming next
+            Zobacz co chcemy zrealizować, jeśli uda nam się pozyskać fundusze na rozwój naszych innowacji w obszarze sektorów kreatywnych.
           </p>
         </motion.div>
 
@@ -159,7 +165,7 @@ export default function RoadmapPage() {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400">
-            <span>More exciting features coming soon</span>
+            <span>Więcej ciekawych funkcji wkrótce</span>
             <ArrowRight className="w-4 h-4" />
           </div>
         </motion.div>

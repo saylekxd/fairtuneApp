@@ -55,23 +55,23 @@ export const MainNavbar: React.FC<MainNavbarProps> = ({ onLoginClick }) => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 text-sm">
           <NavLink to="/roadmap" className={isActive('/roadmap')}>
-            Roadmap
+            Roadmapa
           </NavLink>
           <NavLink to="/pricing" className={isActive('/pricing')}>
-            Pricing
+            Koszty
           </NavLink>
           <NavLink to="/about" className={isActive('/about')}>
-            About
+            O nas
           </NavLink>
           <NavLink to="/contact" className={isActive('/contact')}>
-            Contact
+            Kontakt
           </NavLink>
           <Button 
             size="sm" 
             onClick={handleSignIn}
             className="bg-white text-black hover:bg-gray-100"
           >
-            Sign In
+            Logowanie
           </Button>
         </div>
 
@@ -89,32 +89,32 @@ export const MainNavbar: React.FC<MainNavbarProps> = ({ onLoginClick }) => {
                   onClick={() => handleNavigation('/roadmap')}
                   className={isActive('/roadmap')}
                 >
-                  Roadmap
+                  Roadmapa
                 </button>
                 <button 
                   onClick={() => handleNavigation('/pricing')}
                   className={isActive('/pricing')}
                 >
-                  Pricing
+                  Koszty
                 </button>
                 <button 
                   onClick={() => handleNavigation('/about')}
                   className={isActive('/about')}
                 >
-                  About
+                  O nas
                 </button>
                 <button 
                   onClick={() => handleNavigation('/contact')}
                   className={isActive('/contact')}
                 >
-                  Contact
+                  Kontakt
                 </button>
                 <Button 
                   size="lg" 
                   onClick={handleSignIn}
                   className="bg-white text-black hover:bg-gray-100 w-full"
                 >
-                  Sign In
+                  Logowanie
                 </Button>
               </div>
             </motion.div>

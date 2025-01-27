@@ -11,24 +11,24 @@ interface Photo {
 
 const photos: Photo[] = [
   {
-    url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&w=800&q=75',
-    title: 'Our Studio',
-    description: 'Where the magic happens - our state-of-the-art recording studio'
+    url: 'https://cdn.midjourney.com/ee98c522-9e0e-4733-b0c6-ead6ae5c16c1/0_3.png',
+    title: 'Sprawiedliwe tantiemy',
+    description: '80% przychodów trafia do artystów'
   },
   {
-    url: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&w=800&q=75',
-    title: 'The Team',
-    description: 'Our dedicated team of music and tech enthusiasts'
+    url: 'https://cdn.midjourney.com/0e41dced-3170-4000-9189-fa80f20bc45d/0_0.png',
+    title: 'Blockchain',
+    description: 'Eliminujemy ukryte koszty i zaginione tantiemy'
   },
   {
-    url: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&w=800&q=75',
-    title: 'Live Events',
-    description: 'Supporting live music events across the globe'
+    url: 'https://cdn.midjourney.com/86fce6cd-7213-4a84-9f71-c1530a69f2cb/0_3.png',
+    title: 'Edukacja',
+    description: 'Promujemy świadomość praw autorskich'
   },
   {
-    url: 'https://images.unsplash.com/photo-1598653222000-6b7b7a552625?auto=format&w=800&q=75',
-    title: 'Technology',
-    description: 'Cutting-edge technology powering our platform'
+    url: 'https://cdn.midjourney.com/ee98c522-9e0e-4733-b0c6-ead6ae5c16c1/0_1.png',
+    title: 'Zrównoważony rozwój',
+    description: 'Redukcja śladu węglowego dzięki cyfryzacji'
   }
 ];
 

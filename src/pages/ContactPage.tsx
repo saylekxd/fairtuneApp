@@ -25,17 +25,17 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'adamrojek@icloud.com'
+      value: 'biuro@slowemwtwarz.pl'
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      value: '+1 (555) 123-4567'
+      title: 'Telefon',
+      value: '+48 575 97 01 31'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: 'Address',
-      value: '123 Music Street, Melody City'
+      title: 'Adress',
+      value: 'ul. Wiejska 1C, 44-200 Rybnik'
     }
   ];
 
@@ -88,10 +88,10 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            Get in Touch
+            Złapmy się i pogadajmy!
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            We'd love to hear from you. Our team is always here to help.
+            Będziemy wdzięczni za każdą opinię i pomoc w rozwoju naszego projektu, a w szczególności zapraszamy zainteresowanych artystów do kontaktu.  
           </p>
         </motion.div>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
           >
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-2">
-                Name
+                Imię
               </label>
               <input
                 type="text"
@@ -152,7 +152,7 @@ export default function ContactPage() {
             </div>
             <div>
               <label className="block text-sm font-medium text-zinc-400 mb-2">
-                Message
+                Wiadomość
               </label>
               <textarea
                 value={formData.message}
@@ -174,7 +174,7 @@ export default function ContactPage() {
               disabled={sending}
             >
               <MessageSquare className="w-4 h-4 mr-2" />
-              {sending ? 'Sending...' : 'Send Message'}
+              {sending ? 'Wysyłanie...' : 'Wyślij wiadomość'}
             </Button>
           </motion.form>
         </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
               className="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2"
             >
               <Check className="w-5 h-5" />
-              <span>Message sent successfully!</span>
+              <span>Wiadomość wysłana pomyślnie!</span>
             </motion.div>
           )}
         </AnimatePresence>

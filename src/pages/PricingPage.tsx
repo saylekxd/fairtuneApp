@@ -7,40 +7,41 @@ import { motion } from 'framer-motion';
 export default function PricingPage() {
   const plans = [
     {
-      name: "Basic",
-      price: "$29",
-      description: "Perfect for small venues",
+      name: "Podstawowa",
+      price: "0 PLN",
+      description: "Idealny dla małych lokali",
       features: [
-        "Up to 3 locations",
-        "Basic playlist management",
-        "24/7 music scheduling",
-        "Email support"
+        "Do 3 lokalizacji",
+        "Podstawowe zarządzanie playlistami",
+        "Planowanie muzyki 24/7",
+        "Wsparcie zespołu"
       ],
       popular: false
     },
     {
-      name: "Pro",
-      price: "$79",
-      description: "Ideal for growing businesses",
+      name: "Rozbudowana",
+      price: "0 PLN",
+      description: "Idealny dla rozwijających się firm",
       features: [
-        "Up to 10 locations",
-        "Advanced playlist management",
-        "Content filtering",
-        "Priority support",
-        "Custom announcements"
+        "Do 10 lokalizacji",
+        "Zaawansowane zarządzanie playlistami",
+        "Filtrowanie treści",
+        "Priorytetowe wsparcie",
+        "Komunikaty głosowe VoiceAI"
       ],
-      popular: true
+      popular: false
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      description: "For large organizations",
+      name: "Zaawansowana",
+      price: "Indywidualny",
+      description: "Dla dużych organizacji",
       features: [
-        "Unlimited locations",
-        "API access",
-        "Custom integrations",
-        "Dedicated support",
-        "Advanced analytics"
+    
+        "Nieograniczona liczba lokalizacji",
+        "Dostęp do API",
+        "Niestandardowe integracje",
+        "Dedykowane wsparcie",
+        "Zaawansowana analityka"
       ],
       popular: false
     }
@@ -50,15 +51,25 @@ export default function PricingPage() {
     <PageLayout>
       <div className="max-w-7xl mx-auto px-4 py-20">
         <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-blue-500 text-white text-center py-2 rounded-md mb-8 max-w-md mx-auto"
+        >
+          <p className="text-sm md:text-base">
+            W fazie pilotażu projektu wszystkie usługi są bezpłatne
+          </p>
+        </motion.div>
+        
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-            Simple, Transparent Pricing
+            Proste, transparentne rozliczanie
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            Choose the perfect plan for your business
+            Wybierz najlepszy plan dla swojego lokalu i wspieraj artystów w ich karierze
           </p>
         </motion.div>
 
@@ -77,7 +88,7 @@ export default function PricingPage() {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm flex items-center gap-1">
                   <Star className="w-4 h-4" />
-                  Most Popular
+                  Najbardziej popularny
                 </div>
               )}
               
@@ -102,7 +113,7 @@ export default function PricingPage() {
                 className="w-full mt-8 bg-blue-500 hover:bg-blue-600"
                 size="lg"
               >
-                Get Started
+                Zacznij teraz
               </Button>
             </motion.div>
           ))}

@@ -45,7 +45,7 @@ export const Player: React.FC = () => {
   const canPlayNext = queueIndex < queue.length - 1;
 
   return (
-    <div className="h-20 md:h-24 bg-gradient-to-r from-zinc-900 to-black border-t border-white/10">
+    <div className="fixed bottom-0 left-0 right-0 h-20 md:h-24 bg-gradient-to-r from-zinc-900 to-black border-t border-white/10 z-50">
       {/* Mobile Progress Bar - Now at the top edge */}
       <div className="md:hidden">
         <div className="relative w-full h-1 group touch-none">

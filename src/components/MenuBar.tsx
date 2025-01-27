@@ -47,7 +47,7 @@ export const MenuBar = () => {
 
       setIsAdmin(profile?.role === 'admin');
     } catch (err) {
-      console.error('Error checking admin status:', err);
+      console.error('Błąd podczas sprawdzania statusu administratora:', err);
       setIsAdmin(false);
     } finally {
       setLoading(false);
@@ -63,7 +63,7 @@ export const MenuBar = () => {
         <div className="max-w-7xl mx-auto h-full px-4 flex items-center">
           <div className="flex items-center gap-4">
             <Music className="w-8 h-8 text-blue-500" />
-            <h1 className="text-xl font-bold">Music Manager</h1>
+            <h1 className="text-xl font-bold">Menadżer Muzyki</h1>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export const MenuBar = () => {
         <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Music className="w-8 h-8 text-blue-500" />
-            <h1 className="text-xl font-bold">Music Manager</h1>
+            <h1 className="text-xl font-bold">Menadżer Muzyki</h1>
           </div>
           {isAdmin ? (
             <button
@@ -84,12 +84,12 @@ export const MenuBar = () => {
               className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
             >
               <Upload className="w-5 h-5" />
-              Upload Track
+              Prześlij utwór
             </button>
           ) : (
             <div className="flex items-center gap-2 text-zinc-400">
               <ShieldAlert className="w-5 h-5" />
-              <span>Admin access required</span>
+              <span>Wymagany dostęp administratora</span>
             </div>
           )}
         </div>

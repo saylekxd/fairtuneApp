@@ -30,13 +30,13 @@ const LockedFeatureOverlay = () => (
     <div className="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center mb-4">
       <Lock className="w-8 h-8 text-zinc-500" />
     </div>
-    <h3 className="text-xl font-bold mb-2">Coming Soon</h3>
+    <h3 className="text-xl font-bold mb-2">Wkrótce dostępne</h3>
     <p className="text-zinc-400 mb-4">
-      Voice Messages feature will be available in the upcoming Pro version.
+      Moduł audiobrandingu opartego o AI będzie dostępny w przyszłej wersji.
     </p>
     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800">
       <Crown className="w-4 h-4 text-yellow-500" />
-      <span className="text-sm text-zinc-300">Pro Feature</span>
+      <span className="text-sm text-zinc-300">Komponent VoiceAI</span>
     </div>
   </div>
 );

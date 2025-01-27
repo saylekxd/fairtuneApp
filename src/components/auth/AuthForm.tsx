@@ -32,7 +32,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
         
         if (signInError) {
           if (signInError.message === 'Invalid login credentials') {
-            throw new Error('Incorrect email or password. Please try again.');
+            throw new Error('Niepoprawny email lub hasło. Spróbuj ponownie.');
           }
           throw signInError;
         }
@@ -49,7 +49,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
         
         if (signUpError) {
           if (signUpError.message === 'User already registered') {
-            setError('This email is already registered. Please sign in instead.');
+            setError('Ten email jest już zarejestrowany. Zaloguj się.');
             setIsLogin(true);
             return;
           }
@@ -59,7 +59,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
         onSuccess?.();
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.message : 'Wystąpił błąd');
     } finally {
       setLoading(false);
     }
@@ -72,12 +72,12 @@ export const AuthForm: React.FC<AuthFormProps> = ({
           <KeyRound className="w-8 h-8 text-blue-400" />
         </div>
         <h2 className="text-2xl font-bold tracking-tight" id="modal-title">
-          {isLogin ? 'Welcome Back' : 'Create Account'}
+          {isLogin ? 'Witaj ponownie' : 'Utwórz konto'}
         </h2>
         <p className="text-sm text-zinc-400">
           {isLogin
-            ? 'Sign in to your account to continue'
-            : 'Create a new account to get started'}
+            ? 'Zaloguj się do swojego konta, aby kontynuować'
+            : 'Utwórz nowe konto, aby rozpocząć'}
         </p>
       </div>
 
@@ -99,7 +99,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-zinc-800/50 border border-zinc-700 focus:border-blue-500 rounded-lg text-white placeholder-zinc-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-              placeholder="Enter your email"
+              placeholder="Wpisz swój email"
               required
               aria-describedby={error ? 'auth-error' : undefined}
             />
@@ -111,7 +111,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
             htmlFor="password"
             className="block text-sm font-medium text-zinc-300"
           >
-            Password
+            Hasło
           </label>
           <div className="relative">
             <input
@@ -120,7 +120,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full pl-4 pr-10 py-2.5 bg-zinc-800/50 border border-zinc-700 focus:border-blue-500 rounded-lg text-white placeholder-zinc-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20"
-              placeholder="Enter your password"
+              placeholder="Wpisz swoje hasło"
               required
               minLength={6}
               aria-describedby={error ? 'auth-error' : undefined}
@@ -129,7 +129,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 hover:text-zinc-300 transition-colors"
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              aria-label={showPassword ? 'Ukryj hasło' : 'Pokaż hasło'}
             >
               {showPassword ? (
                 <EyeOff className="w-5 h-5" />
@@ -160,7 +160,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
             <Loader2 className="w-5 h-5 animate-spin" />
           ) : (
             <>
-              {isLogin ? 'Sign In' : 'Create Account'}
+              {isLogin ? 'Zaloguj' : 'Zarejestruj'}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </>
           )}
@@ -175,8 +175,8 @@ export const AuthForm: React.FC<AuthFormProps> = ({
           className="w-full text-sm text-zinc-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500/20 rounded-lg px-2 py-1"
         >
           {isLogin
-            ? "Don't have an account? Sign up"
-            : 'Already have an account? Sign in'}
+            ? 'Nie masz konta? Zarejestruj się'
+            : 'Masz już konto? Zaloguj się'}
         </button>
       </form>
     </div>

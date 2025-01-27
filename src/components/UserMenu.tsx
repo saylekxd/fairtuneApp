@@ -13,7 +13,7 @@ export const UserMenu = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 hover:bg-zinc-800 p-2 rounded-lg transition-colors"
+        className="flex items-center gap-2 hover:bg-zinc-800 p-2 rounded-lg transition-colors md:ml-0 ml-auto"
       >
         <User className="w-5 h-5" />
         <ChevronDown className="w-4 h-4" />
@@ -31,7 +31,7 @@ export const UserMenu = () => {
               className="flex items-center gap-2 w-full px-4 py-2 text-sm text-white hover:bg-zinc-700"
             >
               <LogOut className="w-4 h-4" />
-              Sign Out
+              Wyloguj mnie
             </button>
           </div>
         </>
